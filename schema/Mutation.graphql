@@ -1,0 +1,33 @@
+enum UserStatus {
+    ACTIVE 
+    INACTIVE
+    BLOCKED
+}
+enum UserLanguages {
+    pt
+    en
+    es
+}
+
+type Mutation {
+    saveUser(name: String! email: String! password: String! language: UserLanguages! roleIds: [ID!]!): User
+    saveUserSocial(name: String! email: String! language: UserLanguages! roleIds: [ID!]!): User
+    updateUser(id: ID! name: String! email: String! language: UserLanguages!): User
+    updatePasswordUser(id: ID! password: String!): User
+    deleteUser(id: ID): User
+
+    saveProfile(userId: ID! document: String! phone: String! position: String! area: String! photo: String about: String): Profile
+    updateProfile(id: ID!, userId: ID! document: String! phone: String! position: String! area: String! photo: String about: String): Profile
+
+    saveOrganization(name: String! document_cnpj: String! document_inscricao_estadual: String city: String! state: String! zip_code: String! logo: String about: String userIds: [ID]): Organization
+    updateOrganization(id: ID! name: String document_cnpj: String document_inscricao_estadual: String city: String state: String zip_code: String logo: String about: String userIds: [ID]): Organization
+
+    saveCourse(title: String! description: String!): Course
+    updateCourse(id: ID! title: String! description: String! status: CourseStatus): Course
+    saveCourseModule(course_id: ID! title: String! description: String!): CourseModules
+    updateCourseModule(id: ID! title: String! description: String!): CourseModules
+    saveQuestion(module_id: ID! title: String! description: String! question: String! right_answer: String! wrong_answer_one: String! wrong_answer_two: String! wrong_answer_three: String!): CourseQuestions
+    updateQuestion(id: ID! title: String! description: String! question: String! right_answer: String! wrong_answer_one: String! wrong_answer_two: String! wrong_answer_three: String!): CourseQuestions
+    saveVideos(module_id: ID! title: String! description: String! url: String!): CourseVideos
+    updateVideos(id: ID! title: String! description: String! url: String!): CourseVideos
+}

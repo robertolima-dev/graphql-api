@@ -1,0 +1,29 @@
+{
+  "name": "graphql-api-reference",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^10.17.60"
+  },
+  "scripts": {
+    "start": "node server.ts",
+    "start:dev": "nodemon  server.ts --ext js,graphql",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "apollo-server": "^3.1.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.5.1",
+    "graphql-import": "^1.0.2",
+    "jwt-simple": "^0.5.6",
+    "knex": "^0.95.10",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "uuid": "^8.3.2"
+  }
+}

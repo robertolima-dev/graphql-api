@@ -1,0 +1,36 @@
+fragment userData on User {
+  id
+  name
+  email
+  status
+  language
+  role {
+    slug
+  }
+  profile {
+    ...userProfile
+  }
+  organization {
+    ...userOrganization
+  }
+}
+fragment userProfile on Profile {
+  id
+  document
+  phone
+  position
+  area
+  photo
+  about
+}
+fragment userOrganization on Organization {
+  id
+  name
+  document_cnpj
+  document_inscricao_estadual
+  city
+  state
+  zip_code
+  logo
+  about
+}

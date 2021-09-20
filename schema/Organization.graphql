@@ -1,0 +1,12 @@
+type Organization {
+    id: ID!
+    name: String!
+    document_cnpj: String!
+    document_inscricao_estadual: String
+    city: String!
+    state: String!
+    zip_code: String!
+    logo: String
+    about: String
+    users: [User]
+}

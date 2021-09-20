@@ -1,0 +1,12 @@
+enum EnrollmentStatus {
+    ACTIVE 
+    INACTIVE
+    DELETED
+}
+
+type Enrollment {
+    id: ID 
+    user_id: ID 
+    course_id: ID
+    status: EnrollmentStatus 
+}

@@ -1,0 +1,9 @@
+type Profile {
+    id: ID
+    document: String
+    phone: String
+    position: String
+    area: String
+    photo: String
+    about: String
+}

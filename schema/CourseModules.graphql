@@ -1,0 +1,27 @@
+type CourseModules {
+    id: ID 
+    title: String
+    description: String
+    questions: [CourseQuestions]
+    videos: [CourseVideos]
+}
+type CourseQuestions {
+    id: ID 
+    module_id: ID
+    title: String 
+    description: String 
+    question: String 
+    right_answer: String
+    wrong_answer_one: String
+    wrong_answer_two: String
+    wrong_answer_three: String
+    deleted: Boolean
+}
+type CourseVideos {
+    id: ID 
+    module_id: ID
+    title: String 
+    description: String 
+    url: String 
+    deleted: Boolean
+}

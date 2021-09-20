@@ -1,0 +1,6 @@
+type Menu {
+    id: ID
+    url: String
+    text: String
+    icon: String
+}

@@ -1,0 +1,14 @@
+type Query {
+    login(data: UserLogin!): User
+    users: [User]
+    user(id: ID!): User
+
+    roles: [Role]
+    role(slug: String!): Role
+
+    organizations: [Organization]
+    organization(id: ID!): Organization
+
+    courses: [Course]
+    course(id: ID!): Course
+}

@@ -1,0 +1,22 @@
+scalar Date
+
+enum CourseStatus {
+    ACTIVE 
+    INACTIVE
+    DELETED
+}
+
+type Course {
+    id: ID
+    title: String
+    description: String
+    status: CourseStatus
+    modules: [CourseModules]
+    authors: [CourseAuthors]
+}
+type CourseAuthors {
+    id: ID 
+    name: String 
+    description: String 
+    deleted: Boolean
+}

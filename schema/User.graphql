@@ -1,0 +1,30 @@
+enum UserStatus {
+    ACTIVE 
+    INACTIVE
+    BLOCKED
+}
+enum UserLanguages {
+    pt
+    en
+    es
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String!
+    language: UserLanguages!
+    status: UserStatus!
+    token: String
+    role: [Role!]
+    profile: Profile
+    organization: [Organization]
+    menu: [Menu]
+    courses: [Course]
+}
+
+input UserLogin {
+    email: String! 
+    password: String!
+}
